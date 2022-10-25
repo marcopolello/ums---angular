@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "5a439cef-3aab-46f8-9780-6f4017f77752"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ums": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -98,7 +105,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "95fb6abd-711b-426a-a6fc-bb41478664e1"
-  }
+  "defaultProject": "ums"
 }
