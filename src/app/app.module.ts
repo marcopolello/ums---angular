@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './services/user.service';
 import { UserComponent } from './user/user.component';
+import { PizzaFormComponent } from './pizza-form/pizza-form.component'
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import {FormsModule} from '@angular/forms';
 
@@ -14,7 +15,8 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     UsersComponent,
     UserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    PizzaFormComponent
   ],
   imports: [
     BrowserModule,

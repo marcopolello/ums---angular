@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
   @Input('user-data') user: User | undefined;
   @Output('onDeleteUser') userDeleted = new EventEmitter();
   @Output('onSelectUser') onSelectUser = new EventEmitter();
+  @Output('onCreatePizza') onCreatePizza = new EventEmitter();
+  showPizzaForm: boolean = true;
 
   constructor(private userService: UserService) {
 
@@ -27,8 +29,19 @@ export class UserComponent implements OnInit {
 
   }
   updateUser() {
-    console.log(this.user);
+    //console.log(this.user);
     this.onSelectUser.emit(this.user);
 
+  }
+
+  createPizza() {
+    //const pizza = PizzaMaker.create({ name: 'Inferno', toppings: ['cheese', 'peppers'] });
+    //console.log(this.showPizzaForm);
+    this.showPizzaForm = !this.showPizzaForm;
+    this.onCreatePizza.emit(this.showPizzaForm);
+  }
+
+  createUser() {
+    console.log('');
   }
 }
