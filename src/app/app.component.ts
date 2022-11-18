@@ -22,4 +22,9 @@ export class AppComponent {
     this.showPizzaForm = !showPizza;
     //console.log(this.showPizzaForm);
   }
+
+  newUser(){
+    this.userSelected = new User();
+    this.showForm = true;
+  }
 }

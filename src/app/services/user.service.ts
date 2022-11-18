@@ -9,41 +9,41 @@ export class UserService {
   users: User[] = [
     {
       id: 1,
-      name: 'Hidran1',
-      lastname: 'Arias1',
-      email: 'hidran@gmail.com',
+      name: 'Marco1',
+      lastname: 'Pol1',
+      email: 'Marco@gmail.com',
       fiscalcode: 'RSAHRN72M22Z444S',
-      province: 'Torino',
+      province: 'Venezia',
       phone: '454545455',
       age: 43
     },
     {
       id: 2,
-      name: 'Hidran2',
-      lastname: 'Arias2',
-      email: 'hidran@gmail.com',
+      name: 'Marco2',
+      lastname: 'Pol2',
+      email: 'Marco@gmail.com',
       fiscalcode: 'RSAHRN72M22Z444S',
-      province: 'Torino',
+      province: 'Venezia',
       phone: '454545455',
       age: 43
     },
     {
       id: 3,
-      name: 'Hidran3',
-      lastname: 'Arias3',
-      email: 'hidran@gmail.com',
+      name: 'Marco3',
+      lastname: 'Pol3',
+      email: 'Marco@gmail.com',
       fiscalcode: 'RSAHRN72M22Z444S',
-      province: 'Torino',
+      province: 'Venezia',
       phone: '454545455',
       age: 43
     },
     {
       id: 4,
-      name: 'Hidran4',
-      lastname: 'Arias4',
-      email: 'hidran@gmail.com',
+      name: 'Marco4',
+      lastname: 'Pol4',
+      email: 'Marco@gmail.com',
       fiscalcode: 'RSAHRN72M22Z444S',
-      province: 'Torino',
+      province: 'Venezia',
       phone: '454545455',
       age: 43
     }
@@ -52,6 +52,9 @@ export class UserService {
   getUsers() {
 
     return this.users;
+  }
+  createUser(user: UserInterface) {
+    this.users.splice(0, 0, {...user});
   }
   deleteUser(user: User) {
 
