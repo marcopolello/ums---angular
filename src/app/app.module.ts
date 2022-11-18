@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { PizzaFormComponent } from './pizza-form/pizza-form.component'
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import {FormsModule} from '@angular/forms';
+import { PizzaComponent } from './pizza/pizza.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import {FormsModule} from '@angular/forms';
     UsersComponent,
     UserComponent,
     UserDetailComponent,
-    PizzaFormComponent
+    PizzaFormComponent,
+    PizzaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
