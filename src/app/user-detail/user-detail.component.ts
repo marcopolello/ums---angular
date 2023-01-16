@@ -9,19 +9,22 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-  @Input() user: User;
+  private usercopy!: User;
+  private __user!: User;
+
+  @Input() set user(user: User){
+    this.__user = user;
+    this.usercopy = Object.assign({}, user);
+  };
 
   constructor(private userService: UserService) {
-    this.user = {
-      id: 0,
-      name: '',
-      lastname: '',
-      email: '',
-      fiscalcode: '',
-      province: '',
-      phone: '',
-      age: 0,
-    }
+    this.user = new User();
+    this.__user = new User();
+    this.usercopy = new User();
+  }
+
+  get user() {
+    return this.__user;
   }
 
   ngOnInit(): void {
@@ -33,6 +36,9 @@ export class UserDetailComponent implements OnInit {
     } else {
       this.userService.createUser(this.user);
     }
+
+    // Let's unbind this.user from previously created/modified user
+    this.user = new User();
   }
 
   resetForm(form: FormGroup) {
