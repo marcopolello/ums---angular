@@ -24,12 +24,4 @@ button {
 button.delete {
   background: #fff;
   color: red;
-}
-
-button.create{
-  background-color: #fff;
-  color: yellow;
-  border: 1px solid blue;
-  border-radius: 25px;
-  margin: 2px;
-}
+ }

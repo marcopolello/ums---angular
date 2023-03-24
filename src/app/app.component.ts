@@ -8,23 +8,17 @@ import { User } from './classes/User';
 })
 export class AppComponent {
   showForm = false;
-  showPizzaForm = false;
   userSelected: User = new User();
 
 
 
   updateUser(user: User) {
-    this.showForm = !this.showForm;
+    this.showForm = true;
     this.userSelected = user;
   }
-
-  createPizza(showPizza:Boolean){
-    this.showPizzaForm = !showPizza;
-    //console.log(this.showPizzaForm);
-  }
-
-  newUser(){
+  newUser() {
     this.userSelected = new User();
     this.showForm = true;
+
   }
 }

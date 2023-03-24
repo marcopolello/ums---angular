@@ -1,4 +1,4 @@
-<form #myForm="ngForm">
+<form #f="ngForm">
   <input type="hidden" name="id" [(ngModel)]="user.id">
   <div class="form-group">
     <label for="firstname">First name</label>
@@ -21,16 +21,12 @@
     <input [(ngModel)]="user.email" type="email" name="email" id="email">
   </div>
   <div class="form-group">
-    <label for="province">Province</label>
-    <input [(ngModel)]="user.province" type="province" name="province" id="province">
-  </div>
-  <div class="form-group">
     <label for="age">Age</label>
     <input [(ngModel)]="user.age" type="number" name="age" id="age">
   </div>
 
   <div class="form-group form-footer">
-    <button class="reset" (click)="resetForm(myForm.form)">RESET</button>
+    <button class="reset" (click)="resetForm(f.form)">RESET</button>
     <button (click)="saveUser()" class="btn-save"> SAVE</button>
   </div>
 </form>
